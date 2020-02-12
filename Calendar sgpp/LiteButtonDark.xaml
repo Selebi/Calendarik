@@ -1,0 +1,53 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Calendar_sgpp">
+    <SolidColorBrush x:Key="LiteButtonDark.Static.Foreground" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="LiteButtonDark.Static.Background" Color="#FF2BA277"/>
+    <SolidColorBrush x:Key="LiteButtonDark.Static.Border" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="LiteButtonDark.MouseOver.Background" Color="#FF2E8B69"/>
+    <SolidColorBrush x:Key="LiteButtonDark.MouseOver.Border" Color="#FFEAF2FF"/>
+    <SolidColorBrush x:Key="LiteButtonDark.Pressed.Background" Color="#FF2BA277"/>
+    <SolidColorBrush x:Key="LiteButtonDark.Pressed.Border" Color="#FFD6E5FF"/>
+    <SolidColorBrush x:Key="LiteButtonDark.Disabled.Background" Color="#FFE5E5E5"/>
+    <SolidColorBrush x:Key="LiteButtonDark.Disabled.Border" Color="#FFE5E5E5"/>
+    <SolidColorBrush x:Key="LiteButtonDark.Disabled.Foreground" Color="#FFFFFFFF"/>
+    <Style x:Key="LiteButtonDark" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="Background" Value="{StaticResource LiteButtonDark.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource LiteButtonDark.Static.Border}"/>
+        <Setter Property="Foreground" Value="{StaticResource LiteButtonDark.Static.Foreground}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                          RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource LiteButtonDark.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource LiteButtonDark.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource LiteButtonDark.Pressed.Background}"/>
+                            <Setter Property="Foreground" Value="{StaticResource LiteButtonDark.Static.Foreground}" />
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource LiteButtonDark.Pressed.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource LiteButtonDark.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource LiteButtonDark.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource LiteButtonDark.Disabled.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

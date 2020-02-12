@@ -26,7 +26,7 @@
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.3"/>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.350"/>
                                         <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Width" From="0" To="100" Duration="0:0:0.250"/>
                                         <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Height" From="0" To="100" Duration="0:0:0.250"/>
                                         <ColorAnimation Storyboard.TargetProperty="Foreground.Color" To="White" Duration="0:0:0.250"/>
@@ -36,7 +36,7 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.3"/>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.350"/>
                                         <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Width" From="100" To="0" Duration="0:0:0.250"/>
                                         <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Height" From="100" To="0" Duration="0:0:0.250"/>
                                         <ColorAnimation Storyboard.TargetProperty="Foreground.Color" To="Black" Duration="0:0:0.250"/>
@@ -44,8 +44,12 @@
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
                         </Trigger>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Trigger.EnterActions>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition  Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsChecked" Value="false" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <DoubleAnimation Storyboard.TargetName="BackPlateMouse" Storyboard.TargetProperty="Opacity" From="0" To="0.1" Duration="0:0:0.200"/>
@@ -53,8 +57,8 @@
                                         <DoubleAnimation Storyboard.TargetName="BackPlateMouse" Storyboard.TargetProperty="Height" From="0" To="100" Duration="0:0:0.250"/>
                                     </Storyboard>
                                 </BeginStoryboard>
-                            </Trigger.EnterActions>
-                            <Trigger.ExitActions>
+                            </MultiTrigger.EnterActions>
+                            <MultiTrigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <DoubleAnimation Storyboard.TargetName="BackPlateMouse" Storyboard.TargetProperty="Opacity" From="0.1" To="0" Duration="0:0:0.100"/>
@@ -62,8 +66,8 @@
                                         <DoubleAnimation Storyboard.TargetName="BackPlateMouse" Storyboard.TargetProperty="Height" From="100" To="0" Duration="0:0:0.100"/>
                                     </Storyboard>
                                 </BeginStoryboard>
-                            </Trigger.ExitActions>
-                        </Trigger>
+                            </MultiTrigger.ExitActions>
+                        </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

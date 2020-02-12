@@ -4,11 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calendar_sgpp"
-    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
-    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     x:Class="Calendar_sgpp.MainWindow"
         mc:Ignorable="d" SnapsToDevicePixels="True" UseLayoutRounding ="True"
-        Title="MainWindow" MinHeight="540" MinWidth="420" Width="420" Height="540">
+        Title="MainWindow" MinHeight="536" MinWidth="415" Width="415" Height="560">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -18,16 +16,14 @@
         </Grid.RowDefinitions>
         <Grid  Background="#FF2BA277">
             <TextBlock HorizontalAlignment="Left" Margin="20,10,0,0" TextWrapping="Wrap" Text="2020" 
-                           VerticalAlignment="Top" Foreground="White" FontSize="14"/>
-            <TextBlock HorizontalAlignment="Left" Margin="20,31,0,0" TextWrapping="Wrap" Text="12" 
-                           VerticalAlignment="Top" Foreground="White" FontSize="32"/>
-            <TextBlock HorizontalAlignment="Left" Margin="80,31,0,0" TextWrapping="Wrap" Text="февраля" 
-                    VerticalAlignment="Top" Foreground="White" FontSize="32"/>
+                           VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Left" Margin="16,34,0,0" TextWrapping="Wrap" Text="13" 
+                           VerticalAlignment="Top" Foreground="White" FontSize="36"/>
+            <TextBlock HorizontalAlignment="Left" Margin="65,34,0,0" TextWrapping="Wrap" Text="февраля" 
+                    VerticalAlignment="Top" Foreground="White" FontSize="36"/>
         </Grid>
         <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Grid.Row="1">
-            <Button Content="&gt;" HorizontalAlignment="Right" Height="32" Width="32" FontSize="24" FontFamily="NSimSun" FontWeight="Bold" Style="{StaticResource ButtonsWhite}"/>
-            <TextBlock TextWrapping="NoWrap" Text="2020" VerticalAlignment="Center" FontSize="18" HorizontalAlignment="Center"/>
-            <Button Content="&lt;" HorizontalAlignment="Left" Height="32" Width="32" FontSize="24" FontFamily="NSimSun" FontWeight="Bold" Style="{StaticResource ButtonsWhite}"/>
+            <local:Years/>
         </Grid>
         <Grid Grid.Row="2" Height="300" Width="400">
             <Grid.RowDefinitions>
@@ -54,6 +50,6 @@
             <RadioButton Content="Ноябрь" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="2"/>
             <RadioButton Content="Декабрь" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="3"/>
         </Grid>
-        <Button Grid.Row="3" Style="{StaticResource ButtonsWhite}" Content="Принять" />
+        <Button Grid.Row="3" Style="{StaticResource LiteButtonDark}" Content="Принять" />
     </Grid>
 </Window>

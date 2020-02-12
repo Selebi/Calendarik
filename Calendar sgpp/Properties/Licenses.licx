@@ -1,9 +1,0 @@
-DevExpress.Xpf.Controls.Book, DevExpress.Xpf.Controls.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Xpf.Core.UniformStackPanel, DevExpress.Xpf.Core.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Xpf.Editors.DateEdit, DevExpress.Xpf.Core.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Xpf.Editors.DateNavigator.DateNavigator, DevExpress.Xpf.Core.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Xpf.Charts.RangeControlClient.DateTimeChartRangeControlClient, DevExpress.Xpf.Charts.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Xpf.Carousel.CarouselPanel, DevExpress.Xpf.Carousel.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Xpf.WindowsUI.NavigationFrame, DevExpress.Xpf.Controls.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Xpf.LayoutControl.GroupBox, DevExpress.Xpf.LayoutControl.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Xpf.Editors.CheckEdit, DevExpress.Xpf.Core.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

@@ -10,21 +10,21 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <SolidColorBrush x:Key="ButtonWhite.Static.Foreground" Color="#FF227859"/>
-    <SolidColorBrush x:Key="ButtonWhite.Static.Background" Color="#FFFFFFFF"/>
-    <SolidColorBrush x:Key="ButtonWhite.Static.Border" Color="#FFFFFFFF"/>
-    <SolidColorBrush x:Key="ButtonWhite.MouseOver.Background" Color="#FFD4F5E9"/>
-    <SolidColorBrush x:Key="ButtonWhite.MouseOver.Border" Color="#FFEAF2FF"/>
-    <SolidColorBrush x:Key="ButtonWhite.Pressed.Background" Color="#FF2BA277"/>
-    <SolidColorBrush x:Key="ButtonWhite.Pressed.Border" Color="#FFD6E5FF"/>
-    <SolidColorBrush x:Key="ButtonWhite.Disabled.Background" Color="#FFE5E5E5"/>
-    <SolidColorBrush x:Key="ButtonWhite.Disabled.Border" Color="#FFE5E5E5"/>
-    <SolidColorBrush x:Key="ButtonWhite.Disabled.Foreground" Color="#FF006EB2"/>
-    <Style x:Key="ButtonsWhite" TargetType="{x:Type Button}">
+    <SolidColorBrush x:Key="LiteButton.Static.Foreground" Color="#FF227859"/>
+    <SolidColorBrush x:Key="LiteButton.Static.Background" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="LiteButton.Static.Border" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="LiteButton.MouseOver.Background" Color="#FFD4F5E9"/>
+    <SolidColorBrush x:Key="LiteButton.MouseOver.Border" Color="#FFEAF2FF"/>
+    <SolidColorBrush x:Key="LiteButton.Pressed.Background" Color="#FF2BA277"/>
+    <SolidColorBrush x:Key="LiteButton.Pressed.Border" Color="#FFD6E5FF"/>
+    <SolidColorBrush x:Key="LiteButton.Disabled.Background" Color="#FFE5E5E5"/>
+    <SolidColorBrush x:Key="LiteButton.Disabled.Border" Color="#FFE5E5E5"/>
+    <SolidColorBrush x:Key="LiteButton.Disabled.Foreground" Color="#FF006EB2"/>
+    <Style x:Key="LiteButton" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-        <Setter Property="Background" Value="{StaticResource ButtonWhite.Static.Background}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ButtonWhite.Static.Border}"/>
-        <Setter Property="Foreground" Value="{StaticResource ButtonWhite.Static.Foreground}"/>
+        <Setter Property="Background" Value="{StaticResource LiteButton.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource LiteButton.Static.Border}"/>
+        <Setter Property="Foreground" Value="{StaticResource LiteButton.Static.Foreground}"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="FontSize" Value="16"/>
@@ -33,25 +33,26 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}">
-                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefaulted" Value="true">
                             <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource ButtonWhite.MouseOver.Background}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource ButtonWhite.MouseOver.Border}"/>
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource LiteButton.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource LiteButton.MouseOver.Border}"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource ButtonWhite.Pressed.Background}"/>
-                            <Setter Property="Foreground" Value="{StaticResource ButtonWhite.Static.Background}" />
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource ButtonWhite.Pressed.Border}"/>
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource LiteButton.Pressed.Background}"/>
+                            <Setter Property="Foreground" Value="{StaticResource LiteButton.Static.Background}" />
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource LiteButton.Pressed.Border}"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource ButtonWhite.Disabled.Background}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource ButtonWhite.Disabled.Border}"/>
-                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource ButtonWhite.Disabled.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource LiteButton.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource LiteButton.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource LiteButton.Disabled.Foreground}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
