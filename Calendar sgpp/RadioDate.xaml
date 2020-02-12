@@ -1,0 +1,72 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Calendar_sgpp">
+    <SolidColorBrush x:Key="CheckedColor" Color="#FF2BA277" />
+    <Style x:Key="dateRadioStyle" TargetType="RadioButton" >
+        <Setter Property="TextBlock.FontSize" Value="16"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="MaxWidth" Value="200" />
+        <Setter Property="MaxHeight" Value="200" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Grid x:Name="RadioGrid" Cursor="Hand"  Background="{TemplateBinding Background}">
+                        <Border Name="RadioOuter" Background="Transparent"/>
+                        <Border Name="BackPlateMouse" Background="{StaticResource CheckedColor}" Width="0" Height="0" Opacity="0"/>
+                        <Border Name="BackPlate" Background="{StaticResource CheckedColor}" Width="0" Height="0" Opacity="0"/>
+                        <ContentPresenter x:Name="Cp" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Content="{TemplateBinding Content}" 
+                                          TextBlock.Foreground="{DynamicResource MenuDefaultText}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                          TextBlock.FontSize="{TemplateBinding FontSize}"/>
+                        <Border x:Name="borderDate" Background="Transparent" Height="{TemplateBinding Height}" Width="8" VerticalAlignment="Top" HorizontalAlignment="Right" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.3"/>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Width" From="0" To="100" Duration="0:0:0.250"/>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Height" From="0" To="100" Duration="0:0:0.250"/>
+                                        <ColorAnimation Storyboard.TargetProperty="Foreground.Color" To="White" Duration="0:0:0.250"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.3"/>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Width" From="100" To="0" Duration="0:0:0.250"/>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlate" Storyboard.TargetProperty="Height" From="100" To="0" Duration="0:0:0.250"/>
+                                        <ColorAnimation Storyboard.TargetProperty="Foreground.Color" To="Black" Duration="0:0:0.250"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlateMouse" Storyboard.TargetProperty="Opacity" From="0" To="0.1" Duration="0:0:0.200"/>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlateMouse" Storyboard.TargetProperty="Width" From="0" To="100" Duration="0:0:0.250"/>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlateMouse" Storyboard.TargetProperty="Height" From="0" To="100" Duration="0:0:0.250"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlateMouse" Storyboard.TargetProperty="Opacity" From="0.1" To="0" Duration="0:0:0.100"/>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlateMouse" Storyboard.TargetProperty="Width" From="100" To="0" Duration="0:0:0.100"/>
+                                        <DoubleAnimation Storyboard.TargetName="BackPlateMouse" Storyboard.TargetProperty="Height" From="100" To="0" Duration="0:0:0.100"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
