@@ -1,12 +1,12 @@
-﻿<Window
+﻿<UserControl
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Calendar_sgpp"
-    x:Class="Calendar_sgpp.MainWindow"
+        xmlns:local="clr-namespace:PlanSelector.Controls"
+    x:Class="PlanSelector.Controls.Calendar"
         mc:Ignorable="d" SnapsToDevicePixels="True" UseLayoutRounding ="True"
-        Title="MainWindow" MinHeight="536" MinWidth="415" Width="415" Height="560">
+        MinHeight="100" MinWidth="415" Width="231.364" Height="501.818">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -52,4 +52,4 @@
         </Grid>
         <Button Grid.Row="3" Style="{StaticResource LiteButtonDark}" Content="Принять" />
     </Grid>
-</Window>
+</UserControl>

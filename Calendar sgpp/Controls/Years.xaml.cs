@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
 
-namespace Calendar_sgpp
+namespace PlanSelector.Controls
 {
     /// <summary>
     /// Костылестроение наше всё. Хотя это жэ демка, это временно, наверное...

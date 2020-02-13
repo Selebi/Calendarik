@@ -1,13 +1,14 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 
-namespace Calendar_sgpp
+namespace PlanSelector.Controls
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Calendar : UserControl
     {
-        public MainWindow()
+        public Calendar()
         {
             InitializeComponent();
             fev.IsChecked = true;
