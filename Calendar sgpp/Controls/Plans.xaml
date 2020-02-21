@@ -5,12 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PlanSelector.Controls"
              mc:Ignorable="d" SnapsToDevicePixels="True" UseLayoutRounding ="True"
-             d:DesignHeight="500" d:DesignWidth="1070" >
-    <Grid MaxHeight="500" MaxWidth="1070">
+             d:DesignHeight="800" d:DesignWidth="1070" >
+    <Grid MaxHeight="800" MaxWidth="1070">
         <Grid x:Name="CalGrid" HorizontalAlignment="Left" Margin="410,0,0,400" Width="5" Visibility="Hidden">
             <local:Calendar/>
         </Grid>
-        <Grid HorizontalAlignment="Right" Background="White" MaxHeight="500" MaxWidth="650">
+        <Grid HorizontalAlignment="Right" Background="White" MaxHeight="800" MaxWidth="650">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>

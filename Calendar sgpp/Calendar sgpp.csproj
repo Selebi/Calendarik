@@ -63,10 +63,17 @@
     <Compile Include="Controls\Plans.xaml.cs">
       <DependentUpon>Plans.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Quarter.xaml.cs">
+      <DependentUpon>Quarter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Years.xaml.cs">
       <DependentUpon>Years.xaml</DependentUpon>
     </Compile>
     <Page Include="Controls\Plans.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Quarter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
