@@ -11,7 +11,6 @@ namespace PlanSelector.Controls
         public Calendar()
         {
             InitializeComponent();
-            fev.IsChecked = true;
         }
     }
 }

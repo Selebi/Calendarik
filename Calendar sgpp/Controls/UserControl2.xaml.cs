@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace PlanSelector.Controls
 {
     /// <summary>
-    /// Логика взаимодействия для Quarter.xaml
+    /// Логика взаимодействия для UserControl2.xaml
     /// </summary>
-    public partial class Quarter : UserControl
+    public partial class UserControl2 : UserControl
     {
-        public Quarter()
+        public UserControl2()
         {
             InitializeComponent();
         }

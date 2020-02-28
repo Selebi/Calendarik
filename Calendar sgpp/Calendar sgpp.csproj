@@ -63,8 +63,17 @@
     <Compile Include="Controls\Plans.xaml.cs">
       <DependentUpon>Plans.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Quarter.xaml.cs">
-      <DependentUpon>Quarter.xaml</DependentUpon>
+    <Compile Include="Controls\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControl2.xaml.cs">
+      <DependentUpon>UserControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControl3.xaml.cs">
+      <DependentUpon>UserControl3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControl4.xaml.cs">
+      <DependentUpon>UserControl4.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Years.xaml.cs">
       <DependentUpon>Years.xaml</DependentUpon>
@@ -73,7 +82,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Quarter.xaml">
+    <Page Include="Controls\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\UserControl2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\UserControl3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\UserControl4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

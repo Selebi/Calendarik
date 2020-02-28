@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="PlanSelector.Controls.UserControl4"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PlanSelector.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="356.201" d:DesignWidth="392.744">
+    <Grid>
+        <Grid Grid.Row="2" Height="300" Width="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <RadioButton Content="1 Квартал" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Column="0"/>
+            <RadioButton Content="2 Квартал" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Column="1"/>
+            <RadioButton Content="3 Квартал" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="1" Grid.Column="0"/>
+            <RadioButton Content="4 Квартал" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="1" Grid.Column="1"/>
+        </Grid>
+    </Grid>
+</UserControl>
