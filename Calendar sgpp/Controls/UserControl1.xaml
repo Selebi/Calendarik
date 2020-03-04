@@ -12,8 +12,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <RadioButton Content="Годовой" Style="{StaticResource dateRadioStyle}"/>
-        <RadioButton Content="Квартальный" Style="{StaticResource ResourceKey=dateRadioStyle}" Grid.Column="1"/>
-        <RadioButton Content="Месячный" Style="{StaticResource ResourceKey=dateRadioStyle}" Grid.Column="2"/>
+        <local:RadioButtonPlate Text="Годовой" SelectColor="Green" FontSize="16"/>
+        <local:RadioButtonPlate Text="Квартальный" SelectColor="Green" FontSize="16" Grid.Column="1"/>
+        <local:RadioButtonPlate Text="Месячный" SelectColor="Green" FontSize="16" Grid.Column="2"/>
     </Grid>
 </UserControl>

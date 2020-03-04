@@ -10,7 +10,7 @@
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="200"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid  Background="#FF2BA277">
@@ -21,7 +21,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="65,34,0,0" TextWrapping="Wrap" Text="февраля" 
                     VerticalAlignment="Top" Foreground="White" FontSize="36"/>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Width="450">
             <local:UserControl1 />
         </Grid>
         <Grid Grid.Row="2">

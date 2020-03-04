@@ -63,6 +63,9 @@
     <Compile Include="Controls\Plans.xaml.cs">
       <DependentUpon>Plans.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\RadioButtonPlate.xaml.cs">
+      <DependentUpon>RadioButtonPlate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
@@ -79,6 +82,10 @@
       <DependentUpon>Years.xaml</DependentUpon>
     </Compile>
     <Page Include="Controls\Plans.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RadioButtonPlate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
