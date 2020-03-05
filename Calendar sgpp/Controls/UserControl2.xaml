@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="504.499" d:DesignWidth="448.548">
     <Grid>
-        <Grid Grid.Row="2" Height="400" Width="300">
+        <Grid x:Name="Main" Grid.Row="2" Height="480" Width="360">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -19,18 +19,18 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <RadioButton Content="Январь" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Column="0"/>
-            <RadioButton x:Name="fev" Content="Февраль" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Column="1"/>
-            <RadioButton Content="Март" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Column="2"/>
-            <RadioButton Content="Апрель" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="1" Grid.Column="0"/>
-            <RadioButton Content="Май" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="1" Grid.Column="1"/>
-            <RadioButton Content="Июнь" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="1" Grid.Column="2"/>
-            <RadioButton Content="Июль" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="0"/>
-            <RadioButton Content="Август" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="1"/>
-            <RadioButton Content="Сентябрь" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="2"/>
-            <RadioButton Content="Октябрь" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="3" Grid.Column="0"/>
-            <RadioButton Content="Ноябрь" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="3" Grid.Column="1"/>
-            <RadioButton Content="Декабрь" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="3" Grid.Column="2"/>
+            <local:RadioButtonPlate Text="Январь" SelectColor="#FF2BA277" Grid.Column="0" Checked="MonthChecked" FontSize="18"/>
+            <local:RadioButtonPlate Text="Февраль" SelectColor="#FF2BA277" Grid.Column="1" Checked="MonthChecked" FontSize="18"/>
+            <local:RadioButtonPlate Text="Март" SelectColor="#FF2BA277" Grid.Column="2" Checked="MonthChecked" FontSize="18"/>
+            <local:RadioButtonPlate Text="Апрель" SelectColor="#FF2BA277" Grid.Row="1" Checked="MonthChecked" Grid.Column="0" FontSize="18"/>
+            <local:RadioButtonPlate Text="Май" SelectColor="#FF2BA277" Grid.Row="1" Checked="MonthChecked" Grid.Column="1" FontSize="18"/>
+            <local:RadioButtonPlate Text="Июнь" SelectColor="#FF2BA277" Grid.Row="1" Checked="MonthChecked" Grid.Column="2" FontSize="18"/>
+            <local:RadioButtonPlate Text="Июль" SelectColor="#FF2BA277" Grid.Row="2" Checked="MonthChecked" Grid.Column="0" FontSize="18"/>
+            <local:RadioButtonPlate Text="Август" SelectColor="#FF2BA277" Grid.Row="2" Checked="MonthChecked" Grid.Column="1" FontSize="18"/>
+            <local:RadioButtonPlate Text="Сентябрь" SelectColor="#FF2BA277" Grid.Row="2" Checked="MonthChecked" Grid.Column="2" FontSize="18"/>
+            <local:RadioButtonPlate Text="Октябрь" SelectColor="#FF2BA277" Grid.Row="3" Checked="MonthChecked" Grid.Column="0" FontSize="18"/>
+            <local:RadioButtonPlate Text="Ноябрь" SelectColor="#FF2BA277" Grid.Row="3" Checked="MonthChecked" Grid.Column="1" FontSize="18"/>
+            <local:RadioButtonPlate Text="Декабрь" SelectColor="#FF2BA277" Grid.Row="3" Checked="MonthChecked" Grid.Column="2" FontSize="18"/>
         </Grid>
     </Grid>
 </UserControl>

@@ -4,10 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PlanSelector.Controls"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" Height="400" Width="400"
              d:DesignHeight="455.937" d:DesignWidth="454.485">
     <Grid>
-        <Grid Grid.Row="2" Height="300" Width="300">
+        <Grid x:Name="Main" Grid.Row="2" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -18,15 +18,15 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <RadioButton Content="2016" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Column="0"/>
-            <RadioButton Content="2017" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Column="1"/>
-            <RadioButton Content="2018" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Column="2"/>
-            <RadioButton Content="2019" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="1" Grid.Column="0"/>
-            <RadioButton Content="2020" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="1" Grid.Column="1"/>
-            <RadioButton Content="2021" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="1" Grid.Column="2"/>
-            <RadioButton Content="2022" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="0"/>
-            <RadioButton Content="2023" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="1"/>
-            <RadioButton Content="2024" Style="{StaticResource dateRadioStyle}" Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="2"/>
+            <local:RadioButtonPlate Text="2016" FontSize="20" Grid.Column="0" Checked="Checked" SelectColor="#FF2BA277"/>
+            <local:RadioButtonPlate Text="2017" FontSize="20" Grid.Column="1" Checked="Checked" SelectColor="#FF2BA277"/>
+            <local:RadioButtonPlate Text="2018" FontSize="20" Grid.Column="2" Checked="Checked" SelectColor="#FF2BA277"/>
+            <local:RadioButtonPlate Text="2019" FontSize="20" Grid.Row="1" Checked="Checked" Grid.Column="0" SelectColor="#FF2BA277"/>
+            <local:RadioButtonPlate Text="2020" FontSize="20" Grid.Row="1" Checked="Checked" Grid.Column="1" SelectColor="#FF2BA277"/>
+            <local:RadioButtonPlate Text="2021" FontSize="20" Grid.Row="1" Checked="Checked" Grid.Column="2" SelectColor="#FF2BA277"/>
+            <local:RadioButtonPlate Text="2022" FontSize="20" Grid.Row="2" Checked="Checked" Grid.Column="0" SelectColor="#FF2BA277"/>
+            <local:RadioButtonPlate Text="2023" FontSize="20" Grid.Row="2" Checked="Checked" Grid.Column="1" SelectColor="#FF2BA277"/>
+            <local:RadioButtonPlate Text="2024" FontSize="20" Grid.Row="2" Checked="Checked" Grid.Column="2" SelectColor="#FF2BA277"/>
         </Grid>
     </Grid>
 </UserControl>

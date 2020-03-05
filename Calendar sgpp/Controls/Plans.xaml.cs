@@ -24,8 +24,12 @@ namespace PlanSelector.Controls
         public Plans()
         {
             InitializeComponent();
-            pao.IsChecked = true;
-        }
+            pao.IsSelected = true;
+            CalGrid.Children.Add(calendar);
+            calendar.NewState += s => { DescriptionPlan.Text = s; };
+        } 
+
+        Calendar calendar = new Calendar();
 
         private void OpenCalendar(object sender, RoutedEventArgs e)
         {

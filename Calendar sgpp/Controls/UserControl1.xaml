@@ -12,8 +12,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <local:RadioButtonPlate Text="Годовой" SelectColor="Green" FontSize="16"/>
-        <local:RadioButtonPlate Text="Квартальный" SelectColor="Green" FontSize="16" Grid.Column="1"/>
-        <local:RadioButtonPlate Text="Месячный" SelectColor="Green" FontSize="16" Grid.Column="2"/>
+        <local:RadioButtonPlate Text="Годовой" SelectColor="#FF2BA277" FontSize="18" Checked="Checked" />
+        <local:RadioButtonPlate Text="Квартальный" SelectColor="#FF2BA277" FontSize="18" Checked="Checked" Grid.Column="1"/>
+        <local:RadioButtonPlate Text="Месячный" SelectColor="#FF2BA277" FontSize="18" Checked="Checked" Grid.Column="2"/>
     </Grid>
 </UserControl>

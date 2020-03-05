@@ -14,7 +14,11 @@ namespace PlanSelector.Controls
             InitializeComponent();
             DataContext = this;
             SelectColor = Colors.Aqua;
+            Textblock.Foreground = new SolidColorBrush(Colors.Black);
         }
+
+        public event Action<RadioButtonPlate> Checked;
+        public event Action<RadioButtonPlate> UnChecked;
 
         public enum Type
         {
@@ -111,10 +115,24 @@ namespace PlanSelector.Controls
                 if (value != _isSelected)
                 {
                     _isSelected = value;
+                    if (!this.IsLoaded)
+                        this.Loaded += RadioButtonPlate_Loaded;
+                    else
                     if (!value)
                         StartUnSelectAnimation();
+                    else
+                        StartSelectAnimation();
                 }
             }
+        }
+
+        private void RadioButtonPlate_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (!_isSelected)
+                StartUnSelectAnimation();
+            else
+                StartSelectAnimation();
+            this.Loaded -= RadioButtonPlate_Loaded;
         }
 
         #endregion
@@ -145,7 +163,6 @@ namespace PlanSelector.Controls
                     UnselectNeighbors();
                 IsSelected = true;
                 StartMouseLeaveAnimation();
-                StartSelectAnimation();
             }
         }
 
@@ -159,19 +176,19 @@ namespace PlanSelector.Controls
             {
                 From = 0,
                 To = this.ActualHeight,
-                Duration = TimeSpan.FromSeconds(0.2)
+                Duration = TimeSpan.FromSeconds(0.1)
             };
             DoubleAnimation WidthAnim = new DoubleAnimation()
             {
                 From = 0,
                 To = this.ActualWidth,
-                Duration = TimeSpan.FromSeconds(0.2)
+                Duration = TimeSpan.FromSeconds(0.1)
             };
             DoubleAnimation OpacityAnim = new DoubleAnimation()
             {
                 From = 0,
                 To = 1,
-                Duration = TimeSpan.FromSeconds(0.3)
+                Duration = TimeSpan.FromSeconds(0.2)
             };
             MouseOverBorder.BeginAnimation(HeightProperty, HeightAnim);
             MouseOverBorder.BeginAnimation(WidthProperty, WidthAnim);
@@ -184,13 +201,13 @@ namespace PlanSelector.Controls
             {
                 From = this.ActualHeight,
                 To = 0,
-                Duration = TimeSpan.FromSeconds(0.2)
+                Duration = TimeSpan.FromSeconds(0.1)
             };
             DoubleAnimation WidthAnim = new DoubleAnimation()
             {
                 From = this.ActualWidth,
                 To = 0,
-                Duration = TimeSpan.FromSeconds(0.2)
+                Duration = TimeSpan.FromSeconds(0.1)
             };
             DoubleAnimation OpacityAnim = new DoubleAnimation()
             {
@@ -205,6 +222,7 @@ namespace PlanSelector.Controls
 
         private void StartSelectAnimation()
         {
+            Checked?.Invoke(this);
             DoubleAnimation HeightAnim = new DoubleAnimation()
             {
                 From = 0,
@@ -231,11 +249,12 @@ namespace PlanSelector.Controls
             SelectBorder.BeginAnimation(HeightProperty, HeightAnim);
             SelectBorder.BeginAnimation(WidthProperty, WidthAnim);
             SelectBorder.BeginAnimation(OpacityProperty, OpacityAnim);
-            Textblock.BeginAnimation(TextBlock.ForegroundProperty, TextAnim);
+            Textblock.Foreground.BeginAnimation(SolidColorBrush.ColorProperty, TextAnim);
         }
 
         private void StartUnSelectAnimation()
         {
+            UnChecked?.Invoke(this);
             DoubleAnimation HeightAnim = new DoubleAnimation()
             {
                 From = this.ActualHeight,
@@ -262,7 +281,7 @@ namespace PlanSelector.Controls
             SelectBorder.BeginAnimation(HeightProperty, HeightAnim);
             SelectBorder.BeginAnimation(WidthProperty, WidthAnim);
             SelectBorder.BeginAnimation(OpacityProperty, OpacityAnim);
-            Textblock.BeginAnimation(ForegroundProperty, TextAnim);
+            Textblock.Foreground.BeginAnimation(SolidColorBrush.ColorProperty, TextAnim);
         }
 
         #endregion

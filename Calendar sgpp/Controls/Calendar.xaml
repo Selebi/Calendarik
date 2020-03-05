@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PlanSelector.Controls"
     x:Class="PlanSelector.Controls.Calendar"
         mc:Ignorable="d" SnapsToDevicePixels="True" UseLayoutRounding ="True"
-        MinHeight="100" MinWidth="320" Width="467" Height="702">
+        MinHeight="100" MinWidth="320" Width="400" Height="702">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -14,18 +14,20 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid  Background="#FF2BA277">
-            <TextBlock HorizontalAlignment="Left" Margin="20,10,0,0" TextWrapping="Wrap" Text="2020" 
-                           VerticalAlignment="Top" Foreground="White" FontSize="16"/>
-            <TextBlock HorizontalAlignment="Left" Margin="16,34,0,0" TextWrapping="Wrap" Text="13" 
-                           VerticalAlignment="Top" Foreground="White" FontSize="36"/>
-            <TextBlock HorizontalAlignment="Left" Margin="65,34,0,0" TextWrapping="Wrap" Text="февраля" 
+            <TextBlock x:Name="Year" HorizontalAlignment="Left" Margin="20,10,0,0" TextWrapping="Wrap" Text="2020" 
+                           VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+            <StackPanel Margin="20,39,0,0" Orientation="Horizontal">
+                <TextBlock x:Name="Month" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Март" 
                     VerticalAlignment="Top" Foreground="White" FontSize="36"/>
+                <TextBlock x:Name="Day" Margin="20,0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="13" 
+                           VerticalAlignment="Top" Foreground="White" FontSize="36"/>
+            </StackPanel>
         </Grid>
-        <Grid Grid.Row="1" Width="450">
-            <local:UserControl1 />
+        <Grid Grid.Row="1">
+            <local:UserControl1 NewPanel="NewPanel" NewVariant="NewVariant" />
         </Grid>
-        <Grid Grid.Row="2">
-            <local:UserControl3 />
+        <Grid x:Name="PlanTypeGrid" Grid.Row="2">
+
         </Grid>
     </Grid>
 </UserControl>

@@ -8,7 +8,7 @@
              d:DesignHeight="800" d:DesignWidth="1070" >
     <Grid MaxHeight="800" MaxWidth="1070">
         <Grid x:Name="CalGrid" HorizontalAlignment="Left" Margin="410,0,0,400" Width="5" Visibility="Hidden">
-            <local:Calendar/>
+            
         </Grid>
         <Grid HorizontalAlignment="Right" Background="White" MaxHeight="800" MaxWidth="650">
             <Grid.ColumnDefinitions>
@@ -30,18 +30,17 @@
                     Style="{StaticResource LiteButtonDarkCalendar}" Click="OpenCalendar">
                     <Image Source="/Calendar sgpp;component/Resources/icons8-календарь-50.png" Stretch="None"/>
                 </Button>
-                <TextBlock HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap" Text="Февраль 2020" 
+                <TextBlock x:Name="DescriptionPlan" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap" Text="" 
                 VerticalAlignment="Bottom" Foreground="White" FontSize="18" Grid.Column="1" Margin="10,0" Width="530" Height="30"/>
 
             </Grid>
-            <RadioButton x:Name="pao" Content="ПАО" Margin="0,20,0,0" MaxHeight="500" MaxWidth="500"
-                     Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource Tile}" Height="95" FontSize="48"/>
-            <RadioButton Content="ОСТ" Margin="0,20,0,0" MaxHeight="500" MaxWidth="500"
-                     Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource Tile}" Height="95" Grid.Column="1" FontSize="48"/>
-            <ListBox Margin="0,140,0,80" Grid.Row="1" Grid.ColumnSpan="2" Style="{DynamicResource ListBoxStyle1}"/>
-            <TextBlock Grid.Column="1" Margin="0,0,5,59" Grid.Row="1" TextWrapping="Wrap" Text="Последнее сохранение 10.21.19 (srv\ZemcovAA)" 
+            <local:RadioButtonPlate x:Name="pao" Text="ПАО" Margin="0,20,0,0" MaxHeight="500" MaxWidth="500"
+                     Grid.Row="1" VerticalAlignment="Top" Height="95" FontSize="48" SelectColor="#FF2BA277"/>
+            <local:RadioButtonPlate Text="ОСТ" Margin="0,20,0,0" MaxHeight="500" MaxWidth="500"
+                     Grid.Row="1" VerticalAlignment="Top" Height="95" Grid.Column="1" FontSize="48" SelectColor="#FF2BA277"/>
+            <ListBox Margin="0,140,0,25" Grid.Row="1" Grid.ColumnSpan="2" Style="{DynamicResource ListBoxStyle1}"/>
+            <TextBlock Grid.Column="1" Margin="0,0,5,5" Grid.Row="1" TextWrapping="Wrap" Text="Последнее сохранение 10.21.19 (srv\ZemcovAA)" 
                    VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="305" TextAlignment="Right"/>
-            <Button Content="Выбрать" Grid.Row="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Height="32" Style="{StaticResource LiteButtonDark}"/>
         </Grid>
     </Grid>
 </UserControl>
